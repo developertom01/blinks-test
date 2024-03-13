@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 - The application supports valid json and yaml files
 
-- Supported file types are text,number, boolean and choice
+- Supported data types are text,number, boolean and choice
 
 ## Formats
 
