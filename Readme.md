@@ -12,7 +12,7 @@
 pip install -r requirements.txt
 ```
 
-## Suport
+## Support
 
 - The application supports valid json and yaml files
 
