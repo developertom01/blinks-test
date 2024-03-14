@@ -36,6 +36,9 @@ def main():
     #Print Results
     form_builder.print_questions_and_answers(data,answers)
 
+    path = input("Enter file path to output file: ")
+    form_builder.write_questions_and_answers_to_file(path,data,answers)
+
 
 if __name__ == "__main__":
     main()

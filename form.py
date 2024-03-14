@@ -139,7 +139,25 @@ class FormBuilder:
                     print(f"- {choice}")
             print(f"Your answer: {answer}")
             print()
+    
+    def write_questions_and_answers_to_file(self,path, items, answers):
+        with open(path,"w") as f:
+            for index, item in enumerate(items):
+                question = item["question"]
+                q_type = item["type"]
+                choices = item.get("choices", [])
+                answer = answers[index]
 
+                f.write(f"Question {index + 1}: {question} ")
+                f.write(f"Type: {q_type} ")
+
+                if q_type == "choice":
+                    f.write("Available choices: ")
+                    for choice in choices:
+                        f.write(f"- {choice} ")
+
+                f.write(f"Your answer: {answer} ")
+                f.write("\n")
 # Example usage:
 if __name__ == "__main__":
     form_builder = FormBuilder()
